@@ -5,12 +5,15 @@
 <!-- 4. Two-way binding [(ngModel)]="data" (-> <-) -->
 
 <app-header></app-header>
-<p>{{ title }} app is running properly!</p>
 
-<input type="text" (input)="onChangeStatus($event)">
-<br>
-<button class="btn" [disabled]="!isIndian" (click)="changeStatus()">Be Indian</button>
-<p> {{ status }} </p>
-<p>My name is {{ name }} and my age is {{ getMyAge() }}. </p>
-<app-my-cmp></app-my-cmp>
-<app-footer></app-footer>
+<div class="container">
+  <p>{{ title }} app is running properly!</p>
+
+  <input type="text" (input)="onChangeStatus($event)">
+  <br>
+  <button class="btn" [disabled]="!isIndian" (click)="changeStatus()">Be Indian</button>
+  <p> {{ status }} </p>
+  <p>My name is {{ name }} and my age is {{ getMyAge() }}. </p>
+  <app-my-cmp></app-my-cmp>
+  <app-footer></app-footer>
+</div>
