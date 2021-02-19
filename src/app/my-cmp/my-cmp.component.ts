@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-cmp.component.css']
 })
 export class MyCmpComponent {
-  color: string;
-  constructor(color: string) {
-    this.color = 'black';
+  constructor() {
   }
+
+  color: string = '';
 
 }
