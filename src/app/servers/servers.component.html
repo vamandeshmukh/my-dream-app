@@ -2,6 +2,7 @@
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <P></P>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+
 <p *ngIf="serverCreated">Server {{serverName}} was created.</p>
 <p>
     <!-- <app-server></app-server> -->
