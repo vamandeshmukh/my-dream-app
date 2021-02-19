@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ServersComponent } from './servers/servers.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ServersComponent } from './servers/servers.component';
     MyCmpComponent,
     HeaderComponent,
     FooterComponent,
-    ServersComponent
+    ServersComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
