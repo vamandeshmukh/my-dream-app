@@ -18,7 +18,8 @@ export class AppComponent {
     }, 5000);
   }
   onChangeStatus(event: any) {
-    this.status = event.target.value;
+    // this.status = event.target.value;
+    this.status = (<HTMLInputElement>event.target).value;
     console.log(event);
   }
   changeStatus() {

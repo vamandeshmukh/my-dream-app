@@ -1,19 +1,38 @@
+<!-- Angular 8  -->
 <!-- data binding - 4 types -->
 <!-- 1. String interpolation {{data}}  (from component to template) to render the data on screen  -->
 <!-- 2. property binding [property] = "data" (from component to template) to work with HTML elements-->
 <!-- 3. Event binding (event)="expression" (from template to component)-->
 <!-- 4. Two-way binding [(ngModel)]="data" (-> <-) -->
 
-<app-header></app-header>
+ <!-- Directives in Angular  - 3 types -->
+<!-- 1. Component directives  -->
+<!-- 2. Atribute directives  - change the appearance of an DOM element -->
+<!-- 3. Structural Directives ngif - add / remove DOM elements -->
 
-<div class="container">
+<!-- Component Directives  -->
+<app-header></app-header>
+<p>App Component </p>
+
+<app-servers></app-servers>
+
+
+<app-my-cmp></app-my-cmp>
+<app-footer></app-footer>
+
+<!-- <div class="container">
   <p>{{ title }} app is running properly!</p>
 
   <input type="text" (input)="onChangeStatus($event)">
   <br>
   <button class="btn" [disabled]="!isIndian" (click)="changeStatus()">Be Indian</button>
+
+  <input type="text" class="form-control" [(ngModel)]="status">
+
   <p> {{ status }} </p>
-  <p>My name is {{ name }} and my age is {{ getMyAge() }}. </p>
-  <app-my-cmp></app-my-cmp>
-  <app-footer></app-footer>
+
+  <button class="btn" disabled="!isIndian" (click)="onChangeStatus">Be Indian
+  </button>
+  <p> {{ status }} </p>
+  <p>My name is {{ name }} and my age is {{ getMyAge() }}. </p> -->
 </div>
