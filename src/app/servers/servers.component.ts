@@ -1,9 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-servers', // 1. element default three ways
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  styleUrls: ['./servers.component.css', '../app.component.css']
 })
 export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
