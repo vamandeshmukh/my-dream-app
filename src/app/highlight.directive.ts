@@ -1,6 +1,9 @@
 /* tslint:disable:member-ordering */
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
+
+// attribute directive example 
+
 @Directive({
   selector: '[appHighlight]'
 })
@@ -8,16 +11,16 @@ export class HighlightDirective {
 
   constructor(private el: ElementRef) { }
 
-  @Input() defaultColor: string;
+  @Input() defaultColor: string | undefined;
 
-  @Input('appHighlight') highlightColor: string;
+  @Input('appHighlight') highlightColor: string | undefined;
 
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight(this.highlightColor || this.defaultColor || 'red');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.highlight(null);
+    this.highlight('');
   }
 
   private highlight(color: string) {

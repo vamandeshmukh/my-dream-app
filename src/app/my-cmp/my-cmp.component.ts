@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MyCmpComponent {
   color: string;
-
+  constructor(color: string) {
+    this.color = 'black';
+  }
 
 }
