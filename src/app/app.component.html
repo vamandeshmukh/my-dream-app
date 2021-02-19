@@ -5,23 +5,23 @@
 <!-- 3. Event binding (event)="expression" (from template to component)-->
 <!-- 4. Two-way binding [(ngModel)]="data" (-> <-) -->
 
- <!-- Directives in Angular  - 3 types -->
+<!-- Directives in Angular  - 3 types -->
 <!-- 1. Component directives  -->
 <!-- 2. Atribute directives  - change the appearance of an DOM element -->
 <!-- 3. Structural Directives ngif - add / remove DOM elements -->
 
 <!-- Component Directives  -->
 <app-header></app-header>
-<p>App Component </p>
+<div class="container">
 
-<app-servers></app-servers>
+  <p>App Component </p>
 
-
-<app-my-cmp></app-my-cmp>
-<app-footer></app-footer>
-
-<!-- <div class="container">
-  <p>{{ title }} app is running properly!</p>
+  <app-servers></app-servers>
+  
+  <app-my-cmp></app-my-cmp>
+  <app-footer></app-footer>
+</div>
+<!--   <p>{{ title }} app is running properly!</p>
 
   <input type="text" (input)="onChangeStatus($event)">
   <br>
@@ -35,4 +35,3 @@
   </button>
   <p> {{ status }} </p>
   <p>My name is {{ name }} and my age is {{ getMyAge() }}. </p> -->
-</div>
