@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-cmp.component.css']
 })
 export class MyCmpComponent {
+
   constructor() {
   }
 
