@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataServiceComponent } from '../data-service/data-service.component';
+import { ServiceOneComponent } from '../service-one/service-one.component';
 
 @Component({
   selector: 'app-my-cmp',
@@ -11,6 +12,7 @@ export class MyCmpComponent {
   dataService: DataServiceComponent;
 
   constructor() {
+    this.dataService = new ServiceOneComponent();
   }
 
   color: string = '';
