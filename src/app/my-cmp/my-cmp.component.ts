@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataServiceComponent } from '../data-service/data-service.component';
+import { MyServiceService } from '../my-service.service';
 import { ServiceOneComponent } from '../service-one/service-one.component';
 import { ServiceTwoComponent } from '../service-two/service-two.component';
 
@@ -8,13 +9,19 @@ import { ServiceTwoComponent } from '../service-two/service-two.component';
   templateUrl: './my-cmp.component.html',
   styleUrls: ['./my-cmp.component.css']
 })
-export class MyCmpComponent {
+export class MyCmpComponent implements OnInit {
 
-  dataService: DataServiceComponent;
+  // dataService: DataServiceComponent;
 
-  constructor() {
-    this.dataService = new ServiceOneComponent();
+  myStringData: string;
+
+  constructor(public myServiceService: MyServiceService) {
+    this.myStringData = this.myServiceService.myDataService();
+    // this.dataService = new ServiceOneComponent();
     // this.dataService = new ServiceTwoComponent();
+  }
+  ngOnInit(): void {
+    this.myStringData = this.myServiceService.myDataService();
   }
 
   color: string = '';
