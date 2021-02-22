@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  loginFormGroup: FormGroup;
+
   username: string = 'user';
   password: string = 'password';
 
@@ -14,14 +17,15 @@ export class LoginComponent implements OnInit {
     console.log("logged in");
   }
 
-
-  constructor() { }
-
-
-  ngOnInit(): void {
-    }
-
+  constructor(private formBuilder: FormBuilder) {
+    this.loginFormGroup = this.formBuilder.group({
+      username = 'user';
+      password = 'password'
+    });
   }
 
+  ngOnInit(): void {
+  }
 
+}
 
