@@ -11,7 +11,11 @@ export class LoginComponent implements OnInit {
   password: string = 'password';
   constructor() { }
 
+
   ngOnInit(): void {
+    }
+
   }
 
-}
+
+
