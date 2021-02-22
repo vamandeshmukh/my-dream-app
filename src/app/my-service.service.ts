@@ -12,5 +12,5 @@ export class MyServiceService {
     // this.dataService = new ServiceTwoComponent();
   }
 
-  constructor() { }
+  constructor() { console.log('MyServiceService');}
 }

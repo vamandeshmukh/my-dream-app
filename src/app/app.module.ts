@@ -12,6 +12,8 @@ import { HighlightDirective } from './highlight.directive';
 import { DataServiceComponent } from './data-service/data-service.component';
 import { ServiceOneComponent } from './service-one/service-one.component';
 import { ServiceTwoComponent } from './service-two/service-two.component';
+import { MyServiceService } from './my-service.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,13 @@ import { ServiceTwoComponent } from './service-two/service-two.component';
     HighlightDirective,
     DataServiceComponent,
     ServiceOneComponent,
-    ServiceTwoComponent
+    ServiceTwoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    FormsModule 
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
