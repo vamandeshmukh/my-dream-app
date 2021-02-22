@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MyCmpComponent } from './my-cmp/my-cmp.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServersComponent } from './servers/servers.component';
 import { HighlightDirective } from './highlight.directive';
 import { DataServiceComponent } from './data-service/data-service.component';
@@ -31,7 +31,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

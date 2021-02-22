@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   password: string = 'password';
 
   onLogin() {
-    let username = this.loginFormGroup.get("username").value;
-    let password = this.loginFormGroup.get("password").value;
+    let username = this.loginFormGroup.get("username")?.value;
+    let password = this.loginFormGroup.get("password")?.value;
 
     if (this.username === username && this.password === password) {
       alert("Login succcessful");
