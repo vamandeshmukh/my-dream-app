@@ -11,6 +11,9 @@ export class ServersComponent implements OnInit {
   serverCreationStatus: String = 'Not created.';
   serverName: String = '';
   serverCreated: boolean = false;
+  myName: string = 'Sonu';
+  mySalary: number = 4578.84589654;
+  myJoiningDate: Date = new Date();
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;

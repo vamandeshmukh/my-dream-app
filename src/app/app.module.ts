@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ServersComponent } from './servers/servers.component';
 import { HighlightDirective } from './highlight.directive';
+import { DataServiceComponent } from './data-service/data-service.component';
+import { ServiceOneComponent } from './service-one/service-one.component';
+import { ServiceTwoComponent } from './service-two/service-two.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HighlightDirective } from './highlight.directive';
     HeaderComponent,
     FooterComponent,
     ServersComponent,
-    HighlightDirective
+    HighlightDirective,
+    DataServiceComponent,
+    ServiceOneComponent,
+    ServiceTwoComponent
   ],
   imports: [
     BrowserModule,

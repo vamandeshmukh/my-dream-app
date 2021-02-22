@@ -1,4 +1,22 @@
+<!-- // AngularJS 1 Angular 2, 4, 5, ... 11 onwards   -->
+
+<!-- // ReactJS Vue.JS NestJs ExpressJS NodeJS     -->
+
+<!-- Java FSD - DB (Derby), Java (Spring), UI (Angular)   -->
+
+<!-- MEAN Stack MERN Stack  LAMP -->
+
+<!-- npm i <library> -->
+
+<!-- 'string1' || 'string2' -->
+<!-- 3.412 3.4 -->
+
+<!-- PIPES in Angular   -->
+
+<!-- data | format  -->
+
 <label>Server Name</label>
+
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <P></P>
 <button class="btn btn-warning" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
@@ -8,3 +26,24 @@
     <!-- <app-server></app-server> -->
 </p>
 <p class="deloitte">Some sample text</p>
+
+<p> {{ myName }} </p>
+<p> {{ myName | lowercase}} </p>
+<p> {{ myName | uppercase}} </p>
+
+<p> {{ mySalary | number: '4.4-5' }} </p>
+<p> {{ mySalary | currency: 'INR'}} </p>
+
+<p> {{ myJoiningDate | date: 'short'}} </p>
+<p> {{ myJoiningDate | date: 'medium'}} </p>
+<p> {{ myJoiningDate | date: 'dd/MM/YYYY'}} </p>
+<p> {{ myJoiningDate | date: 'long'}} </p>
+<p> {{ myJoiningDate | date: 'long' | uppercase}} </p>
+
+
+
+<!-- myName: string = 'Sonu';
+  mySalary: number = 4578.84589654;
+  myJoiningDate: Date = new Date(); -->
+
+
