@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 export class MyServiceService {
 
   myDataService(): string {
-    return 'myDataService Data';
+    return 'myDataService Data'; // db connections 
+
+    // this.dataService = new ServiceOneComponent();
+    // this.dataService = new ServiceTwoComponent();
   }
 
   constructor() { }

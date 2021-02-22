@@ -11,17 +11,17 @@ import { ServiceTwoComponent } from '../service-two/service-two.component';
 })
 export class MyCmpComponent implements OnInit {
 
-  // dataService: DataServiceComponent;
+  dataService: DataServiceComponent;
 
   myStringData: string;
 
   constructor(public myServiceService: MyServiceService) {
     this.myStringData = this.myServiceService.myDataService();
-    // this.dataService = new ServiceOneComponent();
+    this.dataService = new ServiceOneComponent();
     // this.dataService = new ServiceTwoComponent();
   }
   ngOnInit(): void {
-    this.myStringData = this.myServiceService.myDataService();
+  
   }
 
   color: string = '';
