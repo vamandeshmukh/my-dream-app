@@ -9,6 +9,12 @@ export class LoginComponent implements OnInit {
 
   username: string = 'user';
   password: string = 'password';
+
+  onLogin() {
+    console.log("logged in");
+  }
+
+
   constructor() { }
 
 
