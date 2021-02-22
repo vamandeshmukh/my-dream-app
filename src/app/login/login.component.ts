@@ -14,13 +14,24 @@ export class LoginComponent implements OnInit {
   password: string = 'password';
 
   onLogin() {
+    let username = this.loginFormGroup.get("username").value;
+    let password = this.loginFormGroup.get("password").value;
+
+    if (this.username === username && this.password === password) {
+      alert("Login succcessful");
+    }
+    else {
+      alert("login failed");
+    }
+
+
     console.log("logged in");
   }
 
   constructor(private formBuilder: FormBuilder) {
     this.loginFormGroup = this.formBuilder.group({
-      username = 'user';
-      password = 'password'
+      username: 'user',
+      password: 'password'
     });
   }
 
