@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataServiceComponent } from '../data-service/data-service.component';
 
 @Component({
   selector: 'app-my-cmp',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-cmp.component.css']
 })
 export class MyCmpComponent {
+
+  dataService: DataServiceComponent;
 
   constructor() {
   }
