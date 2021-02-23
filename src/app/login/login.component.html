@@ -7,6 +7,7 @@
             <label for="username" class="col-md-3">Username</label>
             <div class="col-md-9">
                 <input type="text" id="username" name="username" class="form-control" formControlName="username" />
+               <div *ngIf="loginFormGroup.invalid && loginFormGroup.touched">Email should be in proepr format. </div>
             </div>
         </div>
         <div class="form-group row">
