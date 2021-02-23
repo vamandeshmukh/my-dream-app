@@ -17,7 +17,7 @@
         </div>
         <div class="form-group row">
             <div class="offset-md-3 col-md-3">
-                <input type="submit" value="Login" (click)="onLogin()" class="btn btn-outline-primary btn-block" />
+                <input type="submit" [disabled]="loginFormGroup.invalid" value="Login" (click)="onLogin()" class="btn btn-outline-primary btn-block" />
             </div>
         </div>
     </form>

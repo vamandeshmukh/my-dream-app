@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   loginFormGroup: FormGroup;
 
-  username: string = 'user';
+  username: string = 'user@deloitte.com';
   password: string = 'password';
 
   onLogin() {
@@ -18,21 +18,32 @@ export class LoginComponent implements OnInit {
     let password = this.loginFormGroup.get("password")?.value;
 
     if (this.username === username && this.password === password) {
+      
       alert("Login succcessful");
     }
     else {
       alert("login failed");
     }
-
-
     console.log("logged in");
   }
 
+
   constructor(private formBuilder: FormBuilder) {
+    // this.loginFormGroup = this.formBuilder.group({
+    //   username: 'user',
+    //   password: 'password'
+    // });
+
     this.loginFormGroup = this.formBuilder.group({
-      username: 'user',
-      password: 'password'
-    });
+      username: ['', [
+      Validators.required,
+      Validators.email
+      ]],
+      password: ['', [
+      Validators.required
+      ]]
+      })
+  
   }
 
   ngOnInit(): void {
