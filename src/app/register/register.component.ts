@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+// reactive forms - better control, easier to test 
+// template driven forms - (use two way data binding) 
+
+// assignment - add at least three more properties (inclcuding phones) to employee object 
+// modify the remaining code as required 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,11 +17,12 @@ export class RegisterComponent implements OnInit {
   employee = {
     eid: '',
     ename: ''
+    // , phones: {home: '', office: ''}
   };
 
   onRegister(registerForm: NgForm) {
     console.log(this.employee.eid, this.employee.ename);
-    registerForm.reset();
+    registerForm.reset(); // other business functionality 
   }
 
   constructor() { }
