@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  loginFormGroup: FormGroup;
+  loginFormGroup: FormGroup; 
 
   username: string = 'user@deloitte.com';
   password: string = 'password';

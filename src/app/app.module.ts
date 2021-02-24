@@ -14,6 +14,7 @@ import { ServiceOneComponent } from './service-one/service-one.component';
 import { ServiceTwoComponent } from './service-two/service-two.component';
 import { MyServiceService } from './my-service.service';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     DataServiceComponent,
     ServiceOneComponent,
     ServiceTwoComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
