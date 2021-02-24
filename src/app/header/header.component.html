@@ -1,8 +1,17 @@
 <!-- Header Component -->
+
+<!-- <a [routerLink]="['/']" class="nav-link" >Home</a>
+<a [routerLink]="['/login']" class="nav-link" >Login</a>
+<a [routerLink]="['/register']" class="nav-link" >Register</a>
+<a [routerLink]="['/mycmp']" class="nav-link" >MyCmp</a> -->
+
 <nav class="bg-dark ">
     <div class="container">
-        <a class="navbar-brand" href="https://www2.deloitte.com/in/en.html" target="_blank">
+        <a class="navbar-brand" [routerLink]="['/']" >
             <img src="https://www2.deloitte.com/content/dam/html/au/evolve-2/img/logo.png" height="24px" alt="Deloitte">
         </a>
+        <a [routerLink]="['/login']" class="nav-link">Login</a>
+        <a [routerLink]="['/register']" class="nav-link">Register</a>
+        <a [routerLink]="['/mycmp']" class="nav-link">MyCmp</a>
     </div>
 </nav>

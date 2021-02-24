@@ -19,7 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // path means endpoint 
 const routes: Routes = [
-  // { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'mycmp', component: MyCmpComponent }

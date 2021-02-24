@@ -1,3 +1,14 @@
+<app-header></app-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+
 <!-- Angular 8  -->
 <!-- data binding - 4 types -->
 <!-- 1. String interpolation {{data}}  (from component to template) to render the data on screen  -->
@@ -11,26 +22,20 @@
 <!-- 3. Structural Directives - add / remove DOM elements *ngIf *ngElse, *ngSwitch *ngFor  -->
 
 <!-- Component Directives  -->
-<app-header></app-header>
-<router-outlet></router-outlet>
-<div class="container">
 
-  <p>App Component 4</p>
-  <hr>
 
-  <!-- <app-login *ngIf="!myService.isLoggedIn"></app-login>
+<!-- <app-login *ngIf="!myService.isLoggedIn"></app-login>
   <app-register *ngIf="myService.isLoggedIn"></app-register>
   <app-servers *ngIf="myService.isLoggedIn"></app-servers>
   <app-my-cmp *ngIf="myService.isLoggedIn"></app-my-cmp>
   <app-footer *ngIf="myService.isLoggedIn"></app-footer> -->
 
-  <!-- <app-login *ngIf="!isLoggedIn"></app-login>
+<!-- <app-login *ngIf="!isLoggedIn"></app-login>
   <app-register *ngIf="isLoggedIn"></app-register>
   <app-servers *ngIf="isLoggedIn"></app-servers>
   <app-my-cmp *ngIf="isLoggedIn"></app-my-cmp>
   <app-footer *ngIf="isLoggedIn"></app-footer> -->
 
-</div>
 
 
 <!--   <p>{{ title }} app is running properly!</p>
