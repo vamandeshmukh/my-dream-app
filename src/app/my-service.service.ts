@@ -5,9 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class MyServiceService {
 
-  public isLoggedIn: boolean; // step 1
+  public isLoggedIn: boolean = false; // step 1
 
   myDataService(): string {
+    this.isLoggedIn = true;
     return 'myDataService Data'; // db connections 
 
     // this.dataService = new ServiceOneComponent();
@@ -15,7 +16,7 @@ export class MyServiceService {
   }
 
   constructor() {
-    this.isLoggedIn = false;
+    // this.isLoggedIn = false;
     console.log('MyServiceService');
   }
 }

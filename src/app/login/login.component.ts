@@ -10,18 +10,16 @@ import { MyServiceService } from '../my-service.service';
 export class LoginComponent implements OnInit {
 
   loginFormGroup: FormGroup; 
-
+  
   username: string = 'user@deloitte.com';
   password: string = 'password';
-
 
   onLogin() {
     let username = this.loginFormGroup.get("username")?.value;
     let password = this.loginFormGroup.get("password")?.value;
 
     if (this.username === username && this.password === password) {
-      this.myService.isLoggedIn = true; // step 2
-      console.log(this.myService.isLoggedIn);
+    //  this.myService.dataService(); // step 2
       alert("Login succcessful");
     }
     else {
