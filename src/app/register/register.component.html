@@ -1,1 +1,16 @@
-<p>register works!</p> 
+<form method="POST" #registerForm="ngForm">
+    <label for="eid" class="col-form-label col-md-3">EmployeeId</label>
+    <input type="text" id="eid" name="eid" class="form-control" [(ngModel)]="employee.eid" required #eid="ngModel" />
+
+    <label for="ename" class="col-form-label col-md-3">EmployeeName</label>
+    <input type="text" id="ename" name="ename" class="form-control" [(ngModel)]="employee.ename" required
+        #ename="ngModel" />
+
+
+    <div class="form-group row">
+        <div class="offset-md-3 col-md-9">
+            <input type="submit" (click)="onRegister(registerForm)" [disabled]="registerForm.invalid" value="Add"
+                class="btn btn-primary" />
+        </div>
+    </div>
+</form>
