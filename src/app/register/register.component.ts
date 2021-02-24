@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 // reactive forms - better control, easier to test 
 // template driven forms - (use two way data binding) 
 
-// assignment - add at least three more properties (inclcuding phones) to employee object 
+// assignment - add at least three more properties (including phones) to employee object 
 // modify the remaining code as required 
 
 @Component({
