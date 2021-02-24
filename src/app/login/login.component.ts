@@ -13,15 +13,15 @@ export class LoginComponent implements OnInit {
 
   username: string = 'user@deloitte.com';
   password: string = 'password';
-  isLoggedIn: boolean = false;
+
 
   onLogin() {
     let username = this.loginFormGroup.get("username")?.value;
     let password = this.loginFormGroup.get("password")?.value;
 
     if (this.username === username && this.password === password) {
-      this.myService.isLoggedIn = true;
-      console.log(this.isLoggedIn);
+      this.myService.isLoggedIn = true; // step 2
+      console.log(this.myService.isLoggedIn);
       alert("Login succcessful");
     }
     else {

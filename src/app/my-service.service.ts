@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MyServiceService {
 
-  public isLoggedIn: boolean;
+  public isLoggedIn: boolean; // step 1
 
   myDataService(): string {
     return 'myDataService Data'; // db connections 

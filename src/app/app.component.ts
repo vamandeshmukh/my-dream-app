@@ -13,7 +13,7 @@ export class AppComponent {
   age: number = 10;
   isIndian: boolean = false;
   status: string = 'No status';
-  constructor(myService: MyServiceService) {
+  constructor(myService: MyServiceService) { // step 3
     setTimeout(() => {
       this.isIndian = true;
       console.log(this.isIndian);
