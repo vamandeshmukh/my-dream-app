@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from './login/login.component';
+import { MyServiceService } from './my-service.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,7 @@ export class AppComponent {
   age: number = 10;
   isIndian: boolean = false;
   status: string = 'No status';
-  isLoggedIn: boolean = false; // delete this 
-  constructor(  ) {
+  constructor(myService: MyServiceService) {
     setTimeout(() => {
       this.isIndian = true;
       console.log(this.isIndian);

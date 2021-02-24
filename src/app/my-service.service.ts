@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MyServiceService {
 
+  public isLoggedIn: boolean;
+
   myDataService(): string {
     return 'myDataService Data'; // db connections 
 
@@ -12,5 +14,8 @@ export class MyServiceService {
     // this.dataService = new ServiceTwoComponent();
   }
 
-  constructor() { console.log('MyServiceService');}
+  constructor() {
+    this.isLoggedIn = false;
+    console.log('MyServiceService');
+  }
 }

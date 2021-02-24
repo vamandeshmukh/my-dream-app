@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
     let password = this.loginFormGroup.get("password")?.value;
 
     if (this.username === username && this.password === password) {
-      this.isLoggedIn = true;
+      this.myService.isLoggedIn = true;
       console.log(this.isLoggedIn);
       alert("Login succcessful");
     }
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, myService: MyServiceService) {
     // this.loginFormGroup = this.formBuilder.group({
     //   username: '',
     //   password: ''
