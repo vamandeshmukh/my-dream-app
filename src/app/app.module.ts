@@ -15,6 +15,14 @@ import { ServiceTwoComponent } from './service-two/service-two.component';
 import { MyServiceService } from './my-service.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { RouterModule, Routes } from '@angular/router';
+
+// path means endpoint 
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'mycmp', component: MyCmpComponent }
+]
 
 @NgModule({
   declarations: [
@@ -33,8 +41,9 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]

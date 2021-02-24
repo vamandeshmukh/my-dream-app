@@ -12,7 +12,7 @@
 
 <!-- Component Directives  -->
 <app-header></app-header>
-
+<router-outlet></router-outlet>
 <div class="container">
 
   <p>App Component 4</p>
@@ -29,8 +29,6 @@
   <app-servers *ngIf="isLoggedIn"></app-servers>
   <app-my-cmp *ngIf="isLoggedIn"></app-my-cmp>
   <app-footer *ngIf="isLoggedIn"></app-footer>
-
-
 
 </div>
 
