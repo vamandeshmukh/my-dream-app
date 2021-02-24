@@ -1,11 +1,37 @@
 <!-- Header Component -->
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a [routerLink]="['/']" class="navbar-brand">
+            <img src="https://www2.deloitte.com/content/dam/html/au/evolve-2/img/logo.png" height="24px" alt="Deloitte">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a [routerLink]="['/login']" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/register']" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/mycmp']" class="nav-link">MyCmp</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <p> </p> -->
+
 <!-- <a [routerLink]="['/']" class="nav-link" >Home</a>
 <a [routerLink]="['/login']" class="nav-link" >Login</a>
 <a [routerLink]="['/register']" class="nav-link" >Register</a>
 <a [routerLink]="['/mycmp']" class="nav-link" >MyCmp</a> -->
 
-<nav class="bg-dark ">
+<!-- <nav class="bg-dark ">
     <div class="container">
         <a class="navbar-brand" [routerLink]="['/']" >
             <img src="https://www2.deloitte.com/content/dam/html/au/evolve-2/img/logo.png" height="24px" alt="Deloitte">
@@ -14,4 +40,4 @@
         <a [routerLink]="['/register']" class="nav-link">Register</a>
         <a [routerLink]="['/mycmp']" class="nav-link">MyCmp</a>
     </div>
-</nav>
+</nav> -->

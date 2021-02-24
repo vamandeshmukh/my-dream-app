@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyCmpComponent } from './my-cmp/my-cmp.component';
@@ -15,15 +14,6 @@ import { ServiceTwoComponent } from './service-two/service-two.component';
 import { MyServiceService } from './my-service.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { RouterModule, Routes } from '@angular/router';
-
-// path means endpoint 
-const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'mycmp', component: MyCmpComponent }
-]
 
 @NgModule({
   declarations: [
@@ -43,8 +33,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    ReactiveFormsModule
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]
