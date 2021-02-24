@@ -18,16 +18,12 @@
   <p>App Component 4</p>
   <hr>
 
-  <div>
-    <app-login></app-login>
-  </div>
+  <app-login *ngIf="!isLoggedIn"></app-login>
 
-  <div>
-    <app-register></app-register>
-    <app-servers></app-servers>
-    <app-my-cmp></app-my-cmp>
-    <app-footer></app-footer>
-  </div>
+  <app-register *ngIf="isLoggedIn"></app-register>
+  <app-servers *ngIf="isLoggedIn"></app-servers>
+  <app-my-cmp *ngIf="isLoggedIn"></app-my-cmp>
+  <app-footer *ngIf="isLoggedIn"></app-footer>
 
 </div>
 

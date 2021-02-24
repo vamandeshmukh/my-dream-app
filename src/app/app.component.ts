@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ export class AppComponent {
   age: number = 10;
   isIndian: boolean = false;
   status: string = 'No status';
-  constructor() {
+  isLoggedIn: boolean = false; // delete this 
+  constructor(  ) {
     setTimeout(() => {
       this.isIndian = true;
       console.log(this.isIndian);
