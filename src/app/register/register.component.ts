@@ -12,6 +12,10 @@ import { NgForm } from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
+/*
+ 
+*/
 export class RegisterComponent implements OnInit {
 
   employee = {

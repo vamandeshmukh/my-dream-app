@@ -14,6 +14,10 @@ import { ServiceTwoComponent } from './service-two/service-two.component';
 import { MyServiceService } from './my-service.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmpServiceService } from './emp-service.service';
+import { ConnectComponent } from './connectivity/connect/connect.component';
+import { ServerConnectService } from './connectivity/server-connect.service';
 
 @NgModule({
   declarations: [
@@ -28,14 +32,22 @@ import { RegisterComponent } from './register/register.component';
     ServiceTwoComponent,
     LoginComponent,
     RegisterComponent,
+    ConnectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [MyServiceService],
+
+  // https://angular.io/guide/providers
+
+  providers: [MyServiceService,
+    EmpServiceService,
+    ServerConnectService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

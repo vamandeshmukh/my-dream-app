@@ -1,29 +1,28 @@
 <div class="container">
     <h1 class="text-center">Login</h1>
-    <hr /> 
-    <form method="POST" class="form mt-xl mb-xl" [formGroup]="loginFormGroup">
-        <div class="form-group row">
+    <hr />
+    <!-- <form method="POST" class="form mt-xl mb-xl" [formGroup]="loginFormGroup" > -->
+    <form method="POST" class="form mt-xl mb-xl" [formGroup]="loginFormGroup" (ngSubmit)="onLogin()">
+            <div class="form-group row">
             <label for="username" class="col-md-3">Username</label>
             <div class="col-md-9">
-                <input type="text" id="username" name="username" class="form-control" 
-                formControlName="username" />
-               <div *ngIf="loginFormGroup.invalid && loginFormGroup.touched">
-                   Email should be in proepr format. </div>
+                <input type="text" id="username" name="username" class="form-control" formControlName="username" />
+                <div *ngIf="loginFormGroup.invalid && loginFormGroup.touched">
+                    Email should be in proepr format. </div>
             </div>
         </div>
         <div class="form-group row">
             <label for="password" class="col-md-3">Password</label>
             <div class="col-md-9">
-                <input type="password" id="password" name="password" class="form-control" 
-                formControlName="password" />
-                <div *ngIf="loginFormGroup.invalid && loginFormGroup.touched" >
+                <input type="password" id="password" name="password" class="form-control" formControlName="password" />
+                <div *ngIf="loginFormGroup.invalid && loginFormGroup.touched">
                     Password should not be empty.</div>
             </div>
         </div>
         <div class="form-group row">
             <div class="offset-md-3 col-md-3">
-                <input type="submit"  value="Login" (click)="onLogin()" 
-                class="btn btn-outline-primary btn-block" />
+                <!-- <input type="submit" value="Login" (click)="onLogin()" class="btn btn-outline-primary btn-block" /> -->
+                <input type="submit" value="Login" class="btn btn-outline-primary btn-block" />
             </div>
         </div>
     </form>
