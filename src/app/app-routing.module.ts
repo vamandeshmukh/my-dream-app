@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConnectComponent } from './connectivity/connect/connect.component';
+import { JwtComponent } from './connectivity/jwt.component';
 import { LoginComponent } from './login/login.component';
 import { MyCmpComponent } from './my-cmp/my-cmp.component';
 import { RegisterComponent } from './register/register.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'mycmp', component: MyCmpComponent },
-  { path: 'connect', component: ConnectComponent }
+  { path: 'connect', component: ConnectComponent },
+  { path: 'jwt', component: JwtComponent }
 ]
 
 @NgModule({

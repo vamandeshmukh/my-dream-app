@@ -12,6 +12,9 @@ import { Employee } from '../models/Employee';
 })
 export class ServerConnectService {
 
+  jwtToken: string = '';
+
+
   constructor(private http: HttpClient) { }
 
   getHello(): Observable<string> {
@@ -33,18 +36,23 @@ export class ServerConnectService {
   // getLogin(): string {
   getLogin(username: string, password: string): string {
     console.log('getLogin');
-    let jwtToken: string = '';
     this.http.post<string>('http://localhost:8090/login',
-    // { "username": "user@deloitte.com", "password": "password" },
-    { username, password},
+      // { "username": "user@deloitte.com", "password": "password" },
+      { username, password },
       { responseType: 'text' as 'json' })
       .subscribe(response => {
-        jwtToken = response;
+        this.jwtToken = response;
         console.log(response);
       });
-    return jwtToken;
+    return this.jwtToken;
   }
 
+  getJwtToken() {
+    console.log('getJwtToken');
+    return this.jwtToken;
+  }
+
+  
 
 }
 

@@ -14,10 +14,12 @@ import { ServiceTwoComponent } from './service-two/service-two.component';
 import { MyServiceService } from './my-service.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EmpServiceService } from './emp-service.service';
 import { ConnectComponent } from './connectivity/connect/connect.component';
 import { ServerConnectService } from './connectivity/server-connect.service';
+import { JwtComponent } from './connectivity/jwt.component';
+// import { AuthInterceptor } from './connectivity/connect/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { ServerConnectService } from './connectivity/server-connect.service';
     LoginComponent,
     RegisterComponent,
     ConnectComponent,
+    JwtComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,13 @@ import { ServerConnectService } from './connectivity/server-connect.service';
 
   providers: [MyServiceService,
     EmpServiceService,
-    ServerConnectService
+    ServerConnectService,
+    // add interceptor object here 
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthInterceptor,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })

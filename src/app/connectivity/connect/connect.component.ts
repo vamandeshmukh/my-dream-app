@@ -18,14 +18,14 @@ export class ConnectComponent implements OnInit {
     console.log('ConnectComponent ngOnInit');
 
     this.serverConnectService.getHello()
-    .subscribe(response => { 
-      this.helloData = response; 
-    });
+      .subscribe(response => {
+        this.helloData = response;
+      });
 
     this.serverConnectService.getDept()
-    .subscribe(response => { 
-      this.departments = response; 
-    });
+      .subscribe(response => {
+        this.departments = response;
+      });
 
 
   }
