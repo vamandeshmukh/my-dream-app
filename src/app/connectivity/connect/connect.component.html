@@ -1,11 +1,16 @@
 <p>connect works!</p>
 
+<p> {{ welcome }} </p>
 <p> {{ helloData }} </p>
 
 <!-- <p> {{ departments[0].id }} </p>
 <p> {{ departments[0].name }} </p>
 <p> {{ departments[0].city }} </p> -->
 
+<div>
+    <input type="submit" value="Departments" (click)="callHello()" class="btn btn-outline-primary btn-block" />
+</div>
+
 <div *ngFor="let dept of departments">
     <p> {{dept.id}} {{dept.name}} {{dept.city}} </p>
-</div> 
+</div>

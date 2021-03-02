@@ -56,7 +56,6 @@ export class LoginComponent implements OnInit {
     let username = this.loginFormGroup.get("username")?.value;
     let password = this.loginFormGroup.get("password")?.value;
     console.log('onLogin');
-    // this.serverConnectService.getLogin();
     if (username === 'user@deloitte.com') {
       this.serverConnectService.getLogin(username, password);
       console.log('login successful');
@@ -65,7 +64,5 @@ export class LoginComponent implements OnInit {
     else {
       console.log('login failed.');
     }
-
   }
-
 }

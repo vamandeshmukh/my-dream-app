@@ -17,9 +17,11 @@ export class ServerConnectService {
 
   constructor(private http: HttpClient) { }
 
-  getHello(): Observable<string> {
+  getHello(token: string): Observable<string> {
     console.log('getHello');
-    const headers = new HttpHeaders().set('Authorization', this.jwtToken);
+    let tokenString: string = `Bearer ${token}`;
+    console.log(token);
+    const headers = new HttpHeaders().set('Authorization', tokenString);
     return this.http.get<string>('http://localhost:8090/hello',
       { headers, responseType: 'text' as 'json' });
   }
@@ -31,10 +33,11 @@ export class ServerConnectService {
 
   getDept(token: string): Observable<Department[]> {
     console.log('getDept');
-    let tokenString: string = token;
+    let tokenString: string = `Bearer ${token}`;
     console.log(token);
-    const headers = new HttpHeaders().set('Authorization', token);
-    return this.http.get<Department[]>('http://localhost:8090/departments', { headers });
+    const headers = new HttpHeaders().set('Authorization', tokenString);
+    return this.http.get<Department[]>
+      ('http://localhost:8090/departments', { headers, responseType: 'json' });
   }
 
   // getEmployees(): Observable<Employee[]> {
@@ -42,21 +45,25 @@ export class ServerConnectService {
   //   return this.http.get<Employee[]>('http://localhost:8090/employees');
   // }
 
-  getLogin(username: string, password: string): string {
+  getLogin(username: string, password: string): any {
     console.log('getLogin');
     this.http.post<string>('http://localhost:8090/login',
       { username, password },
       { responseType: 'text' as 'json' })
       .subscribe(response => {
         this.jwtToken = response;
-        console.log(response);
+        console.log(this.jwtToken);
+        return this.jwtToken;
       });
-    console.log(this.jwtToken);
-    return this.jwtToken;
+  }
+
+  getBaseUrl() {
+    console.log('getbaseUrl');
+    return this.http.get<string>('http://localhost:8090/', { responseType: 'text' as 'json' });
   }
 
   getJwtToken() {
-    console.log('getJwtToken');
+    console.log(this.jwtToken);
     return this.jwtToken;
   }
 }

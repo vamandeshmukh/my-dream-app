@@ -9,29 +9,50 @@ import { ServerConnectService } from '../server-connect.service';
 })
 export class ConnectComponent implements OnInit {
 
+  welcome: string = 'Not welcome';
   helloData: string = 'initialData';
   departments: Department[] = [];
+
 
   constructor(private serverConnectService: ServerConnectService) { }
 
   ngOnInit(): void {
     console.log('ConnectComponent ngOnInit');
 
-    let token: string = this.serverConnectService.getJwtToken();
-    console.log(token);
-
-    this.serverConnectService.getHello()
+    this.serverConnectService.getBaseUrl()
       .subscribe(response => {
-        this.helloData = response;
+        this.welcome = response;
       });
 
-    this.serverConnectService.getDept(token)
-      .subscribe(response => {
-        this.departments = response;
-      });
+    // let token: string = this.serverConnectService.getJwtToken();
+    // console.log(token);
 
+    // this.serverConnectService.getHello()
+    //   .subscribe(response => {
+    //     this.helloData = response;
+    //   });
+
+    // this.serverConnectService.getDept(this.serverConnectService.getJwtToken())
+    //   .subscribe(response => {
+    //     this.departments = response;
+    //   });
 
   }
 
+  callHello() {
+    console.log('callHello');
+    this.serverConnectService.getHello(this.serverConnectService.getJwtToken())
+      .subscribe(response => {
+        this.helloData = response;
+      });
+  }
+
+  callDept() {
+    console.log('callDept');
+    this.serverConnectService.getDept(this.serverConnectService.getJwtToken())
+      .subscribe(response => {
+        this.departments = response;
+      });
+  }
+
 }
- 
