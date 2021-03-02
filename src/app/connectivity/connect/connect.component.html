@@ -8,9 +8,12 @@
 <p> {{ departments[0].city }} </p> -->
 
 <div>
-    <input type="submit" value="Departments" (click)="callHello()" class="btn btn-outline-primary btn-block" />
+    <input type="submit" value="Departments" (click)="callDept()" class="btn btn-outline-primary btn-block" />
 </div>
 
+<div>
+    <input type="submit" value="Hello" (click)="callHello()" class="btn btn-outline-primary btn-block" />
+</div>
 <div *ngFor="let dept of departments">
     <p> {{dept.id}} {{dept.name}} {{dept.city}} </p>
 </div>
