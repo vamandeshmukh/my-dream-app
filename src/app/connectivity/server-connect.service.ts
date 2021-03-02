@@ -1,4 +1,4 @@
-import { HttpClient, HttpRequest } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Department } from '../models/Department';
@@ -23,21 +23,26 @@ export class ServerConnectService {
       { responseType: 'text' as 'json' });
   }
 
+  // getDept(): Observable<Department[]> {
+  //   console.log('getDept');
+  //   return this.http.get<Department[]>('http://localhost:8090/departments');
+  // }
+
   getDept(): Observable<Department[]> {
     console.log('getDept');
-    return this.http.get<Department[]>('http://localhost:8090/departments');
+    let tokenString: string = `Bearer &{this.jwtToken}`;
+    const headers = new HttpHeaders().set('Authorization', tokenString);
+    return this.http.get<Department[]>('http://localhost:8090/departments', {headers});
   }
 
-  getEmployees(): Observable<Employee[]> {
-    console.log('getEmployee');
-    return this.http.get<Employee[]>('http://localhost:8090/employees');
-  }
+  // getEmployees(): Observable<Employee[]> {
+  //   console.log('getEmployee');
+  //   return this.http.get<Employee[]>('http://localhost:8090/employees');
+  // }
 
-  // getLogin(): string {
   getLogin(username: string, password: string): string {
     console.log('getLogin');
     this.http.post<string>('http://localhost:8090/login',
-      // { "username": "user@deloitte.com", "password": "password" },
       { username, password },
       { responseType: 'text' as 'json' })
       .subscribe(response => {
@@ -51,8 +56,6 @@ export class ServerConnectService {
     console.log('getJwtToken');
     return this.jwtToken;
   }
-
-  
-
 }
 
+ 

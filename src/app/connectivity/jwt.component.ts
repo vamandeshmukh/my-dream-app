@@ -25,12 +25,6 @@ export class JwtComponent implements OnInit {
         this.getAccessToken(this.authRequest);
     }
 
-    // public getAccessToken(authRequest: any) {
-    //     console.log('getAccessToken');
-    //     let resp = this.jwtClientService.generateToken(authRequest)
-    //         .subscribe(data => console.log(data));
-    // }
-
     public getAccessToken(authRequest: any) {
         console.log('getAccessToken');
         let resp = this.jwtClientService.generateToken(authRequest)
@@ -42,5 +36,11 @@ export class JwtComponent implements OnInit {
         let resp = this.jwtClientService.getHello(token)
             .subscribe(data => this.response = data);
     }
+
+    // public getAccessToken(authRequest: any) {
+    //     console.log('getAccessToken');
+    //     let resp = this.jwtClientService.generateToken(authRequest)
+    //         .subscribe(data => console.log(data));
+    // }
 
 }

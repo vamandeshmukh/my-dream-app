@@ -60,6 +60,7 @@ export class LoginComponent implements OnInit {
     if (username === 'user@deloitte.com') {
       this.serverConnectService.getLogin(username, password);
       console.log('login successful');
+      this.router.navigate(['/connect']);
     }
     else {
       console.log('login failed.');
