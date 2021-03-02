@@ -17,12 +17,15 @@ export class ConnectComponent implements OnInit {
   ngOnInit(): void {
     console.log('ConnectComponent ngOnInit');
 
+    let token: string = this.serverConnectService.getJwtToken();
+    console.log(token);
+
     this.serverConnectService.getHello()
       .subscribe(response => {
         this.helloData = response;
       });
 
-    this.serverConnectService.getDept()
+    this.serverConnectService.getDept(token)
       .subscribe(response => {
         this.departments = response;
       });

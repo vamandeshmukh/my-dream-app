@@ -19,8 +19,9 @@ export class ServerConnectService {
 
   getHello(): Observable<string> {
     console.log('getHello');
+    const headers = new HttpHeaders().set('Authorization', this.jwtToken);
     return this.http.get<string>('http://localhost:8090/hello',
-      { responseType: 'text' as 'json' });
+      { headers, responseType: 'text' as 'json' });
   }
 
   // getDept(): Observable<Department[]> {
@@ -28,11 +29,12 @@ export class ServerConnectService {
   //   return this.http.get<Department[]>('http://localhost:8090/departments');
   // }
 
-  getDept(): Observable<Department[]> {
+  getDept(token: string): Observable<Department[]> {
     console.log('getDept');
-    let tokenString: string = `Bearer &{this.jwtToken}`;
-    const headers = new HttpHeaders().set('Authorization', tokenString);
-    return this.http.get<Department[]>('http://localhost:8090/departments', {headers});
+    let tokenString: string = token;
+    console.log(token);
+    const headers = new HttpHeaders().set('Authorization', token);
+    return this.http.get<Department[]>('http://localhost:8090/departments', { headers });
   }
 
   // getEmployees(): Observable<Employee[]> {
@@ -49,6 +51,7 @@ export class ServerConnectService {
         this.jwtToken = response;
         console.log(response);
       });
+    console.log(this.jwtToken);
     return this.jwtToken;
   }
 
@@ -58,4 +61,3 @@ export class ServerConnectService {
   }
 }
 
- 
