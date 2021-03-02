@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConnectComponent } from './connect.component';
-
+ 
 describe('ConnectComponent', () => {
   let component: ConnectComponent;
   let fixture: ComponentFixture<ConnectComponent>;

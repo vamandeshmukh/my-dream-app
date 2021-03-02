@@ -13,7 +13,6 @@ export class ConnectComponent implements OnInit {
   helloData: string = 'initialData';
   departments: Department[] = [];
 
-
   constructor(private serverConnectService: ServerConnectService) { }
 
   ngOnInit(): void {
