@@ -57,7 +57,7 @@ export class ServerConnectService {
       });
   }
 
-  getBaseUrl() {
+  getBaseUrl() { // welcome 
     console.log('getbaseUrl');
     return this.http.get<string>('http://localhost:8090/', { responseType: 'text' as 'json' });
   }
